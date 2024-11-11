@@ -5,23 +5,23 @@ class UserCard extends StatelessWidget {
       {super.key,
       required this.firstName,
       required this.lastName,
-      required this.country,
       required this.email,
       required this.dateOfBirth,
       required this.age,
       required this.phone,
       required this.image,
-      required this.gender});
+      required this.gender,
+      required this.country});
 
   final String firstName;
   final String lastName;
-  final String country;
   final String email;
   final String dateOfBirth;
   final String age;
   final String phone;
   final String image;
   final String gender;
+  final String country;
 
   @override
   Widget build(BuildContext context) {

@@ -23,15 +23,15 @@ class HomeScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final user = randomUser[index];
                   return UserCard(
-                    gender: user.gender.toString(),
-                    firstName: user.name!.first.toString(),
-                    lastName: user.name!.last.toString(),
-                    age: user.dob!.age.toString(),
-                    country: user.location!.country.toString(),
-                    dateOfBirth: user.dob!.date.toString(),
-                    email: user.email.toString(),
-                    image: user.picture!.large.toString(),
-                    phone: user.phone.toString(),
+                    firstName: user['firstname'],
+                    lastName: user['lastname'],
+                    email: user['email'],
+                    dateOfBirth: user['dob'],
+                    age: user['age'].toString(),
+                    phone: user['phone'],
+                    image: user['image'],
+                    gender: user['gender'],
+                    country: user['country'],
                   );
                 },
                 separatorBuilder: (context, index) =>
