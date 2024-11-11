@@ -6,6 +6,7 @@ import 'package:random_users/Widgets/user_card.dart';
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var obj = Provider.of<UserProvider>(context, listen: false);
     return Scaffold(
       appBar: AppBar(title: const Text('Random User')),
       body: Padding(
@@ -40,6 +41,12 @@ class HomeScreen extends StatelessWidget {
             }
           },
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.refresh),
+        onPressed: () {
+          obj.fetchUserData();
+        },
       ),
     );
   }
